@@ -1,4 +1,4 @@
-package robinstockgo
+package main
 
 func main() {
 
