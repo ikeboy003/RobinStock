@@ -1,35 +1,39 @@
 package urls
 
-/* Convert this python into go synthax # Profiles
-
-
-def account_profile_url(account_number=None):
-    if account_number:
-        return('https://api.robinhood.com/accounts/'+account_number)
-    else:
-        return('https://api.robinhood.com/accounts/')
-
-
-def basic_profile_url():
-    return('https://api.robinhood.com/user/basic_info/')
-
-
-def investment_profile_url():
-    return('https://api.robinhood.com/user/investment_profile/')
-
-
-def portfolio_profile_url():
-    return('https://api.robinhood.com/portfolios/')
-
-
-def security_profile_url():
-    return('https://api.robinhood.com/user/additional_info/')
-
-
-def user_profile_url():
-    return('https://api.robinhood.com/user/')
-
-def portfolis_historicals_url(account_number):
-    return('https://api.robinhood.com/portfolios/historicals/{0}/'.format(account_number))*/
-
 // AccountProfileURL returns the URL for account profile
+func AccountProfileURL(accountNumber string) string {
+	if accountNumber != "" {
+		return "https://api.robinhood.com/accounts/" + accountNumber
+	}
+	return "https://api.robinhood.com/accounts/"
+}
+
+// BasicProfileURL returns the URL for basic profile
+func BasicProfileURL() string {
+	return "https://api.robinhood.com/user/basic_info/"
+}
+
+//	InvestmentProfileURL returns the URL for investment profile
+func InvestmentProfileURL() string {
+	return "https://api.robinhood.com/user/investment_profile/"
+}
+
+// PortfolioProfileURL returns the URL for portfolio profile	
+func PortfolioProfileURL() string {
+	return "https://api.robinhood.com/portfolios/"
+}
+
+// SecurityProfileURL returns the URL for security profile
+func SecurityProfileURL() string {
+	return "https://api.robinhood.com/user/additional_info/"
+}
+
+// UserProfileURL returns the URL for user profile
+func UserProfileURL() string {
+	return "https://api.robinhood.com/user/"
+}
+
+// PortfolisHistoricalsURL returns the URL for portfolio historicals
+func PortfolisHistoricalsURL(accountNumber string) string {
+	return "https://api.robinhood.com/portfolios/historicals/" + accountNumber + "/"
+}
