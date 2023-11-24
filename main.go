@@ -9,7 +9,9 @@ func main() {
 
 	options := &login.LoginOptions{
 		Username: "ianinweze@gmail.com",
-		Password: "Nigeria1998",
+
+		MfaCode: "430766",
+		Scope:   "internal",
 	}
 
 	resp, err := login.Login(*options)

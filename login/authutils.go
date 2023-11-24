@@ -181,6 +181,7 @@ func handleLoginRequest(opts LoginOptions, payload map[string]interface{}) (inte
 
 		// Optionally store the session data
 		if opts.StoreSession {
+			opts.SessionFileName = "sessfile"
 			if err := saveSessionData(opts.SessionFileName, responseData); err != nil {
 				return nil, fmt.Errorf("error saving session data: %w", err)
 			}
